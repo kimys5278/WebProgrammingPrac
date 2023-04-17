@@ -11,14 +11,16 @@
     	
     	String result ;
     	
-    	if(num%2 != 0)
+    	if(num%2 != 0){
     		result = "홀수";
-    	else
+    	}else{
     		result = "짝수";
     	
-    
+    	}
+    	
+
 %>
-    
+  <!--    ----------------------------------------------- -->
 <!DOCTYPE html>
 <html>
 <head>

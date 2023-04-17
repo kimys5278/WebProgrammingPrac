@@ -1,6 +1,8 @@
 package JSPprac;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,8 +16,9 @@ public class Spag extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-	    int num = 0;
-	    String num_ = request.getParameter("numm");
+		int num = 0;
+	    String num_ = request.getParameter("n");
+	    
 	    
 	    if(num_ != null&&num_.equals("")) {
 	    	
@@ -23,13 +26,24 @@ public class Spag extends HttpServlet {
 	    }
 	    	String result ;
 	    	
-	    	if(num%2 != 0) 
-	    		result = "홀수";
-	    	else 
+	    	if(num%2 ==0) 
 	    		result = "짝수";
+	    	else 
+	    		result = "홀수";
 	    
 	    	request.setAttribute("result", result);
-	    	//redirect
+	    	
+	    	String[] names = {"newlec","dragon"};
+	    	request.setAttribute("names", names);
+	    	
+	    	Map<String, Object> notice = new HashMap<String, Object>();
+	    	notice.put("id", 1);
+	    	notice.put("title", "EL은 좋아요");
+	    	request.setAttribute("notice", notice);
+	    	
+	    	
+	    	
+	    	//redirect - 새로운 요청.
 	    	//forward - 이어간다.
 	    	RequestDispatcher dispatcher
 	    		= request.getRequestDispatcher("MVC2.jsp");  	
