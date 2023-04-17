@@ -1,4 +1,4 @@
-package Webclass05;
+package Webclass;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,13 +29,13 @@ public class Calc extends HttpServlet {
 		
 		long result = 0;
 		
-//		switch(req.getParameter("op")) {
+/*		switch(req.getParameter("op")) {
 //		case "+": result = n1+n2; break;
 //		case "-": result = n1+n2; break;
 //		case "*": result = n1+n2; break;
 //		case "/": result = n1+n2; break;
 //		
-//		}
+		} */
 		
 		if(op.equals("+")) {
 			result = n1+n2;

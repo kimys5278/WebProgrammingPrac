@@ -1,4 +1,4 @@
-package Webclass05;
+package Webclass;
 
 import java.io.IOException;
 import java.io.PrintWriter;
